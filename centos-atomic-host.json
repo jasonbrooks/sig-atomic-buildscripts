@@ -66,7 +66,8 @@
 		 "bind-utils",
 		 "authconfig",
 		 "policycoreutils-python",
-		 "cockpit-shell",
+		 "policycoreutils-python-utils",
+                 "cockpit-shell",
 		 "cockpit-bridge",
 		 "setools-console"],
 
