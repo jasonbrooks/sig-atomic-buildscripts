@@ -9,8 +9,7 @@
 
     "selinux": true,
 
-    "bootstrap_packages": ["filesystem", "glibc", "nss-altfiles", "shadow-utils",
-                           "centos-release-atomic"],
+    "bootstrap_packages": ["filesystem", "glibc", "nss-altfiles", "shadow-utils"],
 
     "install-langs": ["en_US"],
 
@@ -28,7 +27,7 @@
     "check-groups": { "type": "file", "filename": "group" },
 
     "packages": ["atomic",
-		 "systemd", "kernel", 
+		 "systemd", "kernel", "rpm-ostree-client", 
 		 "dracut-network",
 		 "biosdevname",
 		 "coreutils",
