@@ -69,6 +69,8 @@
                  "cockpit-shell",
 		 "cockpit-bridge",
                  "cockpit-docker",
+                 "cockpit-networkmanager",
+		 "cockpit-ostree",
                  "cockpit-kubernetes",
 		 "setools-console",
                  "stub-redhat-lsb-core-only-for-ceph",
