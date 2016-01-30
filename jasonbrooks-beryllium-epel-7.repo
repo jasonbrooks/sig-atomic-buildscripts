@@ -2,7 +2,7 @@
 name=Copr repo for beryllium owned by jasonbrooks
 baseurl=https://copr-be.cloud.fedoraproject.org/results/jasonbrooks/beryllium/epel-7-$basearch/
 skip_if_unavailable=True
-gpgcheck=1
+gpgcheck=0
 gpgkey=https://copr-be.cloud.fedoraproject.org/results/jasonbrooks/beryllium/pubkey.gpg
 enabled=1
 enabled_metadata=1
