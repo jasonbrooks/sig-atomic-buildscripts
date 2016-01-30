@@ -27,7 +27,7 @@
     "check-groups": { "type": "file", "filename": "group" },
 
     "packages": ["atomic",
-		 "systemd", "kernel", 
+		 "systemd", "kernel", "rpm-ostree-client", 
 		 "dracut-network",
 		 "biosdevname",
 		 "coreutils",
@@ -69,7 +69,12 @@
 		 "policycoreutils-python-utils",
                  "cockpit-shell",
 		 "cockpit-bridge",
-		 "setools-console"],
+                 "cockpit-docker",
+                 "cockpit-kubernetes",
+		 "setools-console",
+                 "stub-redhat-lsb-core-only-for-ceph",
+                 "ceph-common", "device-mapper-multipath",
+                 "sg3_utils", "glusterfs-fuse"],
 
     "remove-from-packages": [["yum", "/usr/bin/.*"],
 			     ["kernel", "/lib/modules/.*/drivers/gpu"],
