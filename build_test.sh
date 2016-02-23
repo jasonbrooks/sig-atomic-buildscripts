@@ -54,7 +54,7 @@ systemctl start libvirtd
 #python -m SimpleHTTPServer 8000 &
 
 echo '---------- Vagrant ' >> ${LogFile}
-rpm-ostree-toolbox imagefactory --overwrite --tdl ${GitDir}/atomic-7.1.tdl -c  ${GitDir}/config.ini -i kvm -i vagrant-libvirt -i vagrant-virtualbox -k ${GitDir}/atomic-7.1-cloud.ks --vkickstart ${GitDir}/atomic-7.1-vagrant.ks -o ${BuildDir}/virt |& tee ${LogFile}
+rpm-ostree-toolbox imagefactory --overwrite --tdl /root/sig-atomic-buildscripts/atomic-7.1.tdl -c  /root/sig-atomic-buildscripts/config.ini -i kvm -i vagrant-libvirt -i vagrant-virtualbox -k /root/sig-atomic-buildscripts/atomic-7.1-cloud.ks --vkickstart /root/sig-atomic-buildscripts/atomic-7.1-vagrant.ks -o ${BuildDir}/virt |& tee ${LogFile}
 
 
 ## Make a place to copy finished images
