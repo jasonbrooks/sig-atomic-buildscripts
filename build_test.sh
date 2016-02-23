@@ -35,7 +35,7 @@ fi
 
 # sync repo from ds location
 
-ostree remote add --repo=/srv/repo centos-atomic-host --set=gpg-verify=false https://ci.centos.org/artifacts/sig-atomic/downstream/repo && ostree pull --repo=/srv/repo --mirror centos-atomic-host centos-atomic-host/7/x86_64/standard
+#ostree remote add --repo=/srv/repo centos-atomic-host --set=gpg-verify=false https://ci.centos.org/artifacts/sig-atomic/downstream/repo && ostree pull --repo=/srv/repo --mirror centos-atomic-host centos-atomic-host/7/x86_64/standard
 
 
 systemctl start docker
