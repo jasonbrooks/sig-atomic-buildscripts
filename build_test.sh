@@ -16,11 +16,10 @@ set -x
 set -e
 set -o pipefail
 
-pwd
 cd ${BuildDir}
 
 # Init, make sure we have the bits we need installed. 
-cp -f /root/sig-atomic/buildscripts/rhel-atomic-rebuild.repo /etc/yum.repos.d/
+cp -f /root/sig-atomic-buildscripts/rhel-atomic-rebuild.repo /etc/yum.repos.d/
 yum -y install ostree rpm-ostree docker libvirt epel-release
 
 cp -f /root/sig-atomic-buildscripts/atomic7-testing.repo /etc/yum.repos.d/
