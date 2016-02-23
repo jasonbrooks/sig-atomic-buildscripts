@@ -16,6 +16,7 @@ set -x
 set -e
 set -o pipefail
 
+pwd
 cd ${BuildDir}
 
 # Init, make sure we have the bits we need installed. 
