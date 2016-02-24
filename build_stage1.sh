@@ -32,7 +32,7 @@ set -o pipefail
 
 ## update script from git, commented out for now
 cd ${BuildDir}
-git clone https://github.com/CentOS/sig-atomic-buildscripts && cd sig-atomic-buildscripts && git checkout downstream
+git clone https://github.com/jasonbrooks/sig-atomic-buildscripts && cd sig-atomic-buildscripts && git checkout test3
 cd ${BuildDir}
 
 # Init, make sure we have the bits we need installed. 
