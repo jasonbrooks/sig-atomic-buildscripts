@@ -14,7 +14,7 @@
 ## atomic-7.1-cloud.ks and atomic-7.1-vagrant.ks must point to
 ## the desired ostree repo in line beginning w/ "ostreesetup"
 
-VERSION=7.$( date  +%Y%m%d )
+VERSION=7.$( date  +%Y%m%d )-devel
 
 DateStamp=$( date  +%Y%m%d_%H%M%S )
 BuildDir=$1
