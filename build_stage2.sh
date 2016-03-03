@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION=7.$( date  +%Y%m%d )
+VERSION=7.$( date  +%Y%m%d )-devel
 
 DateStamp=$( date  +%Y%m%d_%H%M%S )
 BuildDir=$1
