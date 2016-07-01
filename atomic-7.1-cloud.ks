@@ -105,6 +105,17 @@ echo "RUN_FIRSTBOOT=NO" > /etc/sysconfig/firstboot
 echo "Removing random-seed so it's not the same in every image."
 rm -f /var/lib/random-seed
 
+# Additional  virt drivers vmware and hyperv
+pushd /etc/dracut.conf.d
+# Enable VMWare PVSCSI support for VMWare Fusion guests
+echo 'add_drivers+="mptspi vmw_pvscsi "' > vmware-fusion-drivers.conf
+# Enable HyperV PVSCSI drivers
+echo 'add_drivers+="hv_storvsc hv_netvsc "' > hyperv-drivers.conf
+popd
+# Rerun dracut for the installed kernel (not the running kernel):
+KERNEL_VERSION=$(rpm -q kernel --qf '%{version}-%{release}.%{arch}\n')
+dracut -f /boot/initramfs-$KERNEL_VERSION.img $KERNEL_VERSION
+
 echo "Packages within this cloud image:"
 echo "-----------------------------------------------------------------------"
 rpm -qa
