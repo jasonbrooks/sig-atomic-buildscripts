@@ -32,7 +32,7 @@ set -o pipefail
 
 ## update script from git, commented out for now
 cd ${BuildDir}
-git clone https://github.com/CentOS/sig-atomic-buildscripts && cd sig-atomic-buildscripts && git checkout downstream
+git clone https://github.com/jasonbrooks/sig-atomic-buildscripts && cd sig-atomic-buildscripts && git checkout test-wo-deltas
 cd ${BuildDir}
 
 # Init, make sure we have the bits we need installed. 
@@ -65,7 +65,7 @@ ostree remote add --repo=/srv/repo centos-atomic-host --set=gpg-verify=false htt
 ## compose a new tree, based on defs in centos-atomic-host.json
 
 rpm-ostree compose --repo=${OstreeRepoDir} tree --add-metadata-string=version=${VERSION} ${GitDir}/centos-atomic-host.json |& tee ${BuildDir}/log.compose
-ostree --repo=${OstreeRepoDir} static-delta generate centos-atomic-host/7/x86_64/standard
+#ostree --repo=${OstreeRepoDir} static-delta generate centos-atomic-host/7/x86_64/standard
 ostree --repo=${OstreeRepoDir} summary -u |& tee ${BuildDir}/log.compose
 
 # deal with https://bugzilla.gnome.org/show_bug.cgi?id=748959
