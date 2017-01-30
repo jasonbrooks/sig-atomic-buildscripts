@@ -16,6 +16,7 @@
 
     "initramfs-args": ["--no-hostonly", "--add", "iscsi"],
 
+    "mutate-os-release": "7",
     "postprocess-script": "treecompose-post.sh",
 
     "etc-group-members": ["wheel", "docker"],
@@ -79,7 +80,7 @@
 		 "setools-console",
                  "device-mapper-multipath",
                  "sg3_utils",
-                 "attr"],
+                 "attr", gomtree],
 
     "remove-from-packages": [["yum", "/usr/bin/.*"],
 			     ["kernel", "/lib/modules/.*/drivers/gpu"],
