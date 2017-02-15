@@ -2,7 +2,7 @@
     "comment": "CentOS adaptation of RHEL Atomic host",
 
     "osname": "centos-atomic-host",
-    "ref": "centos-atomic-host/7/x86_64/standard",
+    "ref": "centos-atomic-host/7/x86_64/updates/standard",
 
     "repos": ["CentOS-Base", "CentOS-updates", "CentOS-extras",
               "rhel-atomic-rebuild", "CentOS-CR"],
@@ -14,7 +14,7 @@
     "documentation": false,
 
     "initramfs-args": ["--no-hostonly", "--add", "iscsi"],
-    "automatic_version_prefix": "7.20170209", 
+    "automatic_version_prefix": "7.2017", 
     "mutate-os-release": "7", 
     "postprocess-script": "treecompose-post.sh",
 
