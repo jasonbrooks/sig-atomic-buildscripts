@@ -60,7 +60,7 @@ fi
 
 # sync repo from ds location
 
-ostree remote add --repo=/srv/repo centos-atomic-host --set=gpg-verify=true https://buildlogs.centos.org/centos/7/atomic/x86_64/repo/ && ostree pull --depth=-1 --repo=/srv/repo --mirror centos-atomic-host centos-atomic-host/7/x86_64/standard
+ostree remote add --repo=/srv/repo centos-atomic-host --set=gpg-verify=false https://buildlogs.centos.org/centos/7/atomic/x86_64/repo/ && ostree pull --depth=-1 --repo=/srv/repo --mirror centos-atomic-host centos-atomic-host/7/x86_64/standard
 
 # temp fix for issue 259
 
