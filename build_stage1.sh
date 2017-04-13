@@ -64,19 +64,5 @@ ostree remote add --repo=/srv/repo centos-atomic-host --set=gpg-verify=false htt
 
 # temp fix for issue 259
 
-ostree --repo=/srv/repo static-delta generate --from d433342b09673c9c4d75ff6eef50a447e73a7541491e5197e1dde14147b164b8 --to 841fae51e5b68716a9996ddbdb4e543855bbfab9c6e4cb433267b24e41e8bbc1 && ostree --repo=/srv/repo summary -u
-
-## compose a new tree, based on defs in centos-atomic-host.json
-
-rpm-ostree compose --repo=${OstreeRepoDir} tree ${GitDir}/centos-atomic-host.json |& tee ${BuildDir}/log.compose
-if ostree --repo=${OstreeRepoDir} rev-parse centos-atomic-host/7/x86_64/standard^ &>/dev/null; then
-    ostree --repo=${OstreeRepoDir} static-delta generate centos-atomic-host/7/x86_64/standard
-fi
-ostree --repo=${OstreeRepoDir} summary -u |& tee ${BuildDir}/log.compose
-
-# deal with https://bugzilla.gnome.org/show_bug.cgi?id=748959
-
-chmod -R a+r /srv/repo/objects
-
-echo 'Stage-1 done, you can now sign the repo, or just run stage2 '
+ostree --repo=/srv/repo static-delta generate --from 841fae51e5b68716a9996ddbdb4e543855bbfab9c6e4cb433267b24e41e8bbc1 --to 91fe03fef75652f68a9974261b391faaeb5bd20f33abf09bb1d45511ba2df04e && ostree --repo=/srv/repo summary -u
 
