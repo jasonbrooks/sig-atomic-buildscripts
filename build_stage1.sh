@@ -32,14 +32,14 @@ set -o pipefail
 
 ## update script from git, commented out for now
 cd ${BuildDir}
-git clone https://github.com/CentOS/sig-atomic-buildscripts && cd sig-atomic-buildscripts && git checkout downstream
+git clone https://github.com/jasonbrooks/sig-atomic-buildscripts && cd sig-atomic-buildscripts && git checkout test
 cd ${BuildDir}
 
 # Init, make sure we have the bits we need installed. 
 cp -f ${GitDir}/rhel-atomic-rebuild.repo /etc/yum.repos.d/
 yum -y install ostree rpm-ostree glib2 docker libvirt epel-release libgsystem
 
-cp -f ${GitDir}/atomic7-testing.repo /etc/yum.repos.d/
+mv ${GitDir}/atomic7-testing.repo /etc/yum.repos.d/
 echo 'enabled=0' >> /etc/yum.repos.d/atomic7-testing.repo
 yum --enablerepo=atomic7-testing -y install rpm-ostree-toolbox
 
