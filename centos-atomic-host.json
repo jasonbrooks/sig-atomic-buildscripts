@@ -130,7 +130,7 @@
                  "cronie", "dnsmasq", "oci-umount"],
 
     "remove-from-packages": [["yum", "/usr/bin/.*"],
-			     ["filesystem"]],
+			     ["filesystem", "/usr/share/backgrounds"]],
 
     "units": ["docker.service", "tuned.service", "docker-storage-setup.service"],
 
