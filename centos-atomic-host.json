@@ -131,7 +131,7 @@
 
     "remove-from-packages": [["yum", "/usr/bin/.*"],
 			     ["filesystem"],
-                             ["/usr/share/kde4", "/usr/share/anaconda"]],
+                             ["/usr/share/anaconda"]],
 
     "units": ["docker.service", "tuned.service", "docker-storage-setup.service"],
 
