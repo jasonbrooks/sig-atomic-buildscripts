@@ -130,8 +130,7 @@
                  "cronie", "dnsmasq", "oci-umount"],
 
     "remove-from-packages": [["yum", "/usr/bin/.*"],
-			     ["filesystem"],
-                             ["/usr/share/anaconda"]],
+			     ["filesystem"]],
 
     "units": ["docker.service", "tuned.service", "docker-storage-setup.service"],
 
