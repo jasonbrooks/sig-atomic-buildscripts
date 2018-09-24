@@ -1,0 +1,25 @@
+include: centos-atomic-base.yaml
+mutate-os-release: '7'
+packages:
+- microcode_ctl
+- dnsmasq
+- cryptsetup
+- device-mapper-multipath
+- etcd
+- flannel
+- ceph-common
+- glusterfs-fuse
+- sg3_utils
+- gomtree
+- cronie
+- oci-umount
+- redhat-logos
+- firewalld
+- podman
+ref: centos-atomic-host/7/x86_64/standard
+repos:
+- CentOS-Base
+- CentOS-updates
+- CentOS-extras
+- rhel-atomic-rebuild
+- CentOS-CR
